@@ -59,7 +59,7 @@
     </BaseModal>
 
     <div class="text-center my-4 text-xs font-semibold">
-      Tottaly spent: {{ totalSpent }} €
+      Totally spent: {{ totalSpent }} €
     </div>
   </div>
 </template>
@@ -81,6 +81,9 @@ const lastPrize = ref(null)
 
 const totalSpent = ref(0)
 const scholarMode = useRuntimeConfig().public.scholarMode
+
+console.log('scholarMode:', scholarMode); // Проверка значения scholarMode
+console.log('typeof scholarMode:', typeof scholarMode); // Проверка типа scholarMode
 
 // Переносим инициализацию с localStorage в onMounted
 onMounted(() => {

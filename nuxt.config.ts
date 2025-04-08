@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       spinURL: process.env.SPIN_URL,
-      scholarMode: process.env.SCHOLAR_MODE
+      scholarMode: process.env.SCHOLAR_MODE === 'true'
     }
   },
 
