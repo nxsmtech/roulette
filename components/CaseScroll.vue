@@ -88,7 +88,7 @@ console.log('typeof scholarMode:', typeof scholarMode); // Проверка ти
 // Переносим инициализацию с localStorage в onMounted
 onMounted(() => {
   const storedTotal = parseFloat(localStorage.getItem('totalSpent') || '0')
-  totalSpent.value = storedTotal
+  totalSpent.value = parseFloat(storedTotal.toFixed(2))
 })
 
 const prizeList = scholarMode ? prizes['scholar'] : prizes['default']
